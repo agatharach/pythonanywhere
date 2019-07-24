@@ -1,0 +1,28 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col12">
+                <h2>Our Mentee</h2>
+            </div>
+        </div>
+        {% for i in mentee %}
+        <div class="row justify-content-center pb-2">
+            <div class="col-3 text-right">
+                <img class="menteephotos" src="{{i.photo}}">
+            </div>
+            <div class="col-6">
+                <div class="menteenama">
+                    <h5>{{i.nama}}</h5>
+                </div>
+                <div class="menteemotto">
+                    <p>"{{i.motto}}"</p>
+                </div>
+
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+{% endblock %}

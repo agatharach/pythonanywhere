@@ -1,0 +1,63 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- css bootstrap -->
+    <link rel="stylesheet" href="{% static 'bootstrap.min.css'%}">
+    <!-- css custom -->
+    <link rel="stylesheet" href="{% static 'style.css'%}" >
+</head>
+<body>
+    <header>
+        <div class="container-fluid">
+            <div class="row pt-3">
+                <div class="col-md-4">
+                    <div class="alpha">
+                        <a href="{% url 'Halaman_Home' %}">Alpha Tech Academy</a>
+                    </div>    
+                </div>
+                <div class="col-md-8">
+                    <ul class="menu">
+                        <li><a href="{% url 'Halaman_Home' %}">Home</a></li>
+                        <li><a href="{% url 'Halaman_Blog' %}">Blog</a></li>
+                        <li><a href="{% url 'Halaman_Mentor' %}">Mentor</a></li>
+                        <li><a href="{% url 'Halaman_Mentee' %}">Mentee</a></li>
+                        <li><a href="{% url 'Halaman_Author' %}">Author</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row bg-info text-white justify-content-center">
+                <div class="col-8 align-self-center text-center">
+                    <img src="https://i.postimg.cc/mrRR4MFM/alpha-logo.png" >
+                    <h1>Alpha Tech Academy</h1>
+                    <h5>Alterra Academy is a tech talent incubator that gives everyone (even non-IT background) a chance to be a professional Tech Talent within 3 months. Email : academy@alphatech.id Mobile phone: 0877 9609 9530</h5>
+                </div>
+            </div>
+        </div>    
+    </header>
+    <div>
+    {% block content %}
+    {% endblock %}
+    </div>
+    <footer>
+        <div class="container-fluid">
+            <div class="row bg-info justify-content-center pt-4">
+                <div class="our_product">
+                    <ul class="product">
+                        <span>Our Product :</span>
+                        <li><img src="https://i.postimg.cc/XY93txX4/logo-grey-alphapay.png" alt=""></li>
+                        <li><img src="https://i.postimg.cc/9fjXfKsD/logo-grey-sepulsa.png" alt=""></li>
+                        <li><img src="https://i.postimg.cc/gJ2WXWs2/logo-grey-alphabill.png" alt=""></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row CP justify-content-center mt-2">
+                <p>Contact Person: Mobile phone: 0877 9609 9530. Email: <span class="email">academy@alphatech.id </span> </p>
+            </div>
+        </div>  
+    </footer>  
+</body>
+</html>
